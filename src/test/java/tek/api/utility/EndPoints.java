@@ -6,7 +6,8 @@ public enum EndPoints {
 	TOKEN_VERIFY("/api/token/verify"),
 	Get_All_Accounts("/api/accounts/get-all-accounts"),
 	Get_Account("/api/accounts/get-account"),
-	Add_Primary_Account("/api/accounts/add-primary-account");
+	Add_Primary_Account("/api/accounts/add-primary-account"),
+	Get_ALl_Plan_Code("/api/plans/get-all-plan-code");
 	
 
 	private String value;
