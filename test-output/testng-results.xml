@@ -1,65 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-28T11:19:26 EDT" name="Default suite" finished-at="2023-05-28T11:19:30 EDT" duration-ms="3440">
+  <suite started-at="2023-05-28T12:03:23 EDT" name="Default suite" finished-at="2023-05-28T12:03:28 EDT" duration-ms="4792">
     <groups>
     </groups>
-    <test started-at="2023-05-28T11:19:26 EDT" name="Default test" finished-at="2023-05-28T11:19:30 EDT" duration-ms="3440">
-      <class name="tek.api.sqa.tests.AddPrimaryAccountTest">
-        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.AddPrimaryAccountTest@311bf055]" started-at="2023-05-28T11:19:26 EDT" name="setupApiTest" finished-at="2023-05-28T11:19:27 EDT" duration-ms="433" status="PASS">
+    <test started-at="2023-05-28T12:03:23 EDT" name="Default test" finished-at="2023-05-28T12:03:28 EDT" duration-ms="4792">
+      <class name="tek.api.sqa.tests.GetAllPlanCodeTest">
+        <test-method is-config="true" signature="setupApiTest()[pri:0, instance:tek.api.sqa.tests.GetAllPlanCodeTest@78452606]" started-at="2023-05-28T12:03:23 EDT" name="setupApiTest" finished-at="2023-05-28T12:03:24 EDT" duration-ms="433" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupApiTest -->
-        <test-method signature="addPrimaryAccount()[pri:0, instance:tek.api.sqa.tests.AddPrimaryAccountTest@311bf055]" started-at="2023-05-28T11:19:27 EDT" name="addPrimaryAccount" finished-at="2023-05-28T11:19:29 EDT" duration-ms="2646" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [201] but found [500]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [201] but found [500]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:1240)
-at org.testng.Assert.assertEquals(Assert.java:1274)
-at tek.api.sqa.tests.AddPrimaryAccountTest.addPrimaryAccount(AddPrimaryAccountTest.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="getAllPlanCode()[pri:0, instance:tek.api.sqa.tests.GetAllPlanCodeTest@78452606]" started-at="2023-05-28T12:03:24 EDT" name="getAllPlanCode" finished-at="2023-05-28T12:03:28 EDT" duration-ms="3978" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addPrimaryAccount -->
-      </class> <!-- tek.api.sqa.tests.AddPrimaryAccountTest -->
+        </test-method> <!-- getAllPlanCode -->
+      </class> <!-- tek.api.sqa.tests.GetAllPlanCodeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
