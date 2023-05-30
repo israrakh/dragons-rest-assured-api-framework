@@ -16,7 +16,7 @@ public class UserProfileTest extends APITestConfig {
 		String token = getValidToken();
 		RequestSpecification req = RestAssured.given();
 		req.queryParam("Authorization", "Bearer " + token);
-		Response response = req.when().get(EndPoints.User_Profile.getValue());
+		Response response = req.when().get(EndPoints.USER_PROFILE.getValue());
 		response.prettyPrint();
 		Assert.assertEquals(response.getStatusCode(), 200);
 

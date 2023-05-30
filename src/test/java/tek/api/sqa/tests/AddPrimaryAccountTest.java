@@ -30,7 +30,7 @@ public class AddPrimaryAccountTest extends APITestConfig {
 		RequestSpecification req = RestAssured.given();
 		req.body(requestBody);
 		req.header("Authorization", "Bearer " + token);
-		Response response = req.when().post(EndPoints.Add_Primary_Account.getValue());
+		Response response = req.when().post(EndPoints.ADD_PRIMARY_ACCOUNT.getValue());
 		response.prettyPrint();
 		Assert.assertEquals(response.getStatusCode(), 201);
 		String email = response.jsonPath().getString("email");

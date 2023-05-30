@@ -18,7 +18,7 @@ public class GetAccountTest extends APITestConfig {
 		RequestSpecification req = RestAssured.given();
 		req.header("Authorization", "Bearer " + token);
 		req.queryParam("primaryPersonId", 7112);
-		Response response = req.when().get(EndPoints.Get_Account.getValue());
+		Response response = req.when().get(EndPoints.GET_ACCOUNT.getValue());
 		response.prettyPrint();
 		Assert.assertEquals(response.getStatusCode(), 200);
 		int primaryPersonId = response.jsonPath().get("primaryPerson.id");
