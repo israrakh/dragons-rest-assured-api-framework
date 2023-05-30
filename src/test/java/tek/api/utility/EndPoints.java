@@ -7,7 +7,8 @@ public enum EndPoints {
 	Get_All_Accounts("/api/accounts/get-all-accounts"),
 	Get_Account("/api/accounts/get-account"),
 	Add_Primary_Account("/api/accounts/add-primary-account"),
-	Get_ALl_Plan_Code("/api/plans/get-all-plan-code");
+	Get_ALl_Plan_Code("/api/plans/get-all-plan-code"),
+	User_Profile("/api/user/profile");
 	
 
 	private String value;
