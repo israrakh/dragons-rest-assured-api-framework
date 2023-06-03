@@ -3,7 +3,6 @@ package tek.api.sqa.base;
 import org.testng.Assert;
 import tek.api.utility.YamlPropertyReader;
 import tek.api.model.AuthUser;
-
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 
@@ -25,7 +24,9 @@ public class BaseConfig {
     public String getBaseUrl() {
       return getApiProperties().get("base_url").toString();
     }
-
+    public HashMap<String, String> getDatabseProperties() {
+    	return (HashMap<String, String>) this.propertyReader.getProperty("db");
+    }
     public AuthUser getAuthUser() {
         HashMap<String, String> userMap = (HashMap<String, String>) getApiProperties().get("users");
         AuthUser authUser = new AuthUser();
