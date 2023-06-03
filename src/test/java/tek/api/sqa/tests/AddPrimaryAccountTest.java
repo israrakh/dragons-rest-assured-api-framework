@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import tek.api.sqa.base.APITestConfig;
@@ -28,6 +29,7 @@ public class AddPrimaryAccountTest extends APITestConfig {
 		requestBody.put("employmentStatus", "Student");
 		requestBody.put("dateOfBirth", "2002-07-09");
 		RequestSpecification req = RestAssured.given();
+		req.contentType(ContentType.JSON);
 		req.body(requestBody);
 		req.header("Authorization", "Bearer " + token);
 		Response response = req.when().post(EndPoints.ADD_PRIMARY_ACCOUNT.getValue());
