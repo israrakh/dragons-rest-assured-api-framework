@@ -3,18 +3,24 @@
 <suite name="Failed suite [Regression test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Tek Insurance API Tests(failed)">
     <classes>
-      <class name="tek.api.sqa.tests.UserProfileTest">
+      <class name="tek.api.sqa.tests.CreateAccountTest">
         <methods>
           <include name="setupApiTest"/>
-          <include name="userProfileTest"/>
+          <include name="createAccountValidTest"/>
         </methods>
-      </class> <!-- tek.api.sqa.tests.UserProfileTest -->
+      </class> <!-- tek.api.sqa.tests.CreateAccountTest -->
       <class name="tek.api.sqa.tests.AddPrimaryAccountTest">
         <methods>
           <include name="setupApiTest"/>
           <include name="addPrimaryAccount"/>
         </methods>
       </class> <!-- tek.api.sqa.tests.AddPrimaryAccountTest -->
+      <class name="tek.api.sqa.tests.UserProfileTest">
+        <methods>
+          <include name="setupApiTest"/>
+          <include name="userProfileTest"/>
+        </methods>
+      </class> <!-- tek.api.sqa.tests.UserProfileTest -->
     </classes>
   </test> <!-- Tek Insurance API Tests(failed) -->
 </suite> <!-- Failed suite [Regression test Suite] -->

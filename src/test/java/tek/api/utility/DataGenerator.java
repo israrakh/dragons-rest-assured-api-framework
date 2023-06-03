@@ -1,5 +1,7 @@
 package tek.api.utility;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -24,12 +26,12 @@ public class DataGenerator {
 	public String getEmail() {
 		String firstName = getFirstName();
 		String lastName = getLastName();
-		double randomNum = (int) (Math.random() * 10);
+		int randomNum = (int) (Math.random() * 100);
 		return firstName + "." + lastName + randomNum + "@gmail.com";
 	}
 
 	public String getEmail(String firstName, String lastName, String provider) {
-		double randomNumber = (int) (Math.random() * 10);
+		int randomNumber = (int) (Math.random() * 100);
 		return firstName + "." + lastName + randomNumber + provider;
 	}
 
@@ -37,9 +39,13 @@ public class DataGenerator {
 		return faker.job().position();
 	}
 
-	public String getDateOfBirth() {
+	public Date getDateOfBirth() {
 		Date date = faker.date().birthday();
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-		return formatter.format(date);
+		DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+		try {
+			return formatter.parse(date.toString());
+		} catch (ParseException e) {
+			throw new RuntimeException("Date parse exception");
+		}
 	}
 }

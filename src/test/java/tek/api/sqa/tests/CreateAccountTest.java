@@ -13,6 +13,7 @@ import tek.api.utility.DataGenerator;
 import tek.api.utility.EndPoints;
 
 public class CreateAccountTest extends APITestConfig {
+	
 	private DataGenerator data = new DataGenerator();
 
 	@Test
@@ -33,13 +34,13 @@ public class CreateAccountTest extends APITestConfig {
 		requestBody.setMaritalStatus("SINGLE");
 		requestBody.setEmploymentStatus(data.getJobTitle());
 		requestBody.setDateOfBirth(data.getDateOfBirth());
-		
 		req.body(requestBody);
 		Response response = req.when().post(EndPoints.ADD_PRIMARY_ACCOUNT.getValue());
 		response.prettyPrint();
 		Assert.assertEquals(response.getStatusCode(), 201);
 
-		String actualEmail = response.jsonPath().getString("email");
-		Assert.assertEquals(actualEmail, requestBody.getEmail());
+//		String actualEmail = response.jsonPath().getString("email");
+		PrimaryAccount responseBody = response.as(PrimaryAccount.class);
+		Assert.assertEquals(responseBody.getEmail(), requestBody.getEmail());
 	}
 }
