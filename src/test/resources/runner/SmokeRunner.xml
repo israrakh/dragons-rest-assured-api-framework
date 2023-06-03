@@ -4,6 +4,8 @@
 		<classes>
 			<class name="tek.api.sqa.tests.SecurityTest"></class>
 			<class name="tek.api.sqa.tests.TokenVerifyTest"></class>
+			<class name="tek.api.sqa.tests.CreateAccountTest"></class>
+			<class name="tek.api.sqa.tests.GetAccountTest"></class>
 		</classes>
 	</test>
 </suite>
