@@ -16,7 +16,7 @@ public class GetAllPlanCodeTest extends APITestConfig {
 		String token = getValidToken();
 		RequestSpecification req = RestAssured.given();
 		req.header("Authorization", "Bearer " + token);
-		Response response = req.when().get(EndPoints.Get_ALl_Plan_Code.getValue());
+		Response response = req.when().get(EndPoints.GET_ALL_PLAN_CODE.getValue());
 		response.prettyPrint();
 		Assert.assertEquals(response.getStatusCode(), 200);
 		
