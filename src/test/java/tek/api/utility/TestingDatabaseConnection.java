@@ -19,21 +19,21 @@ public class TestingDatabaseConnection {
 		try {
 			Connection connection = DriverManager.getConnection(url, username, password);
 			Statement statement = connection.createStatement();
-			ResultSet resultSet = statement
-					.executeQuery("select * from primary_person_car order by primary_person_id desc limit 20;");
-
+			ResultSet resultSet = statement.executeQuery("select * from primary_person order by id desc limit 5");
+			
 			while (resultSet.next()) {
-				long primaryPersonId = resultSet.getLong("id");
-				String make = resultSet.getString("make");
-				String model = resultSet.getString("model");
-
-				System.out.println(primaryPersonId);
-				System.out.println(make);
-				System.out.println(model);
+				long primaryPersonIds = resultSet.getLong("id");
+				System.out.println(primaryPersonIds);
+				String emails = resultSet.getString("email");
+				System.out.println(emails);
+				String firstNames = resultSet.getString("first_name");
+				System.out.println(firstNames);
+				String lastNames = resultSet.getString("last_name");
+				System.out.println(lastNames);
 			}
-
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+
 	}
 }
