@@ -42,8 +42,9 @@ public class DataGenerator {
 	public Date getDateOfBirth() {
 		Date date = faker.date().birthday();
 		DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+		String formattedDate = formatter.format(date);
 		try {
-			return formatter.parse(date.toString());
+			return formatter.parse(formattedDate);
 		} catch (ParseException e) {
 			throw new RuntimeException("Date parse exception");
 		}
