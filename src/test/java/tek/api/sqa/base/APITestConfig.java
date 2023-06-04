@@ -1,12 +1,12 @@
 package tek.api.sqa.base;
 
-
 import com.aventstack.extentreports.testng.listener.ExtentITestListenerAdapter;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import tek.api.model.PrimaryAccount;
+import tek.api.utility.Asserter;
 import tek.api.utility.DataGenerator;
 import tek.api.utility.EndPoints;
 import java.util.HashMap;
@@ -19,7 +19,7 @@ import org.testng.annotations.Listeners;
 public class APITestConfig extends BaseConfig {
 	
 	private DataGenerator dataGenerator = new DataGenerator();
-	
+	public Asserter asserter = new Asserter();
 	@BeforeMethod
 	public void setupApiTest() {
 		System.out.println("Setting up Test");
@@ -35,6 +35,12 @@ public class APITestConfig extends BaseConfig {
 		Response response = request.when().post(EndPoints.TOKEN_GENERATION.getValue());
 		String token = response.jsonPath().get("token");
 		return token;
+	}
+	
+	
+	public RequestSpecification getRequestWithValidToken() {
+		String token = getValidToken();
+		return RestAssured.given().header("Authorization",  "Bearer " + token); 
 	}
 	
 	public PrimaryAccount createAccountData() {
